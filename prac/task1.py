@@ -1,8 +1,4 @@
 import numpy as np
-import matplotlib.pyplot as plt
-from sklearn.decomposition import PCA
-from sklearn.preprocessing import StandardScaler
-
 
 # 1 =======================================================================
 def find_eigen_values_and_vectors(matrix):
@@ -28,11 +24,11 @@ def find_eigen_values_and_vectors(matrix):
         # λ * v
         lambda_v = lambda_i * v_i
 
-        # Використовуємо all close чи перевірити чи насправді вони однакові
+        # Використовуємо all close щоб перевірити чи насправді вони однакові
         if not np.allclose(A_v, lambda_v):
             print(f"{A_v}, {lambda_v}\nA * v = λ * v has not accomplished")
         else:
-            print(f"{A_v},\nA * v = λ * v has accomplished")
+            print(f"{A_v}, {lambda_v}\nA * v = λ * v has accomplished")
 
     return (eigenvalues, eigenvectors)
 
