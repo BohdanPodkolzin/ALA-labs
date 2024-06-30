@@ -21,10 +21,7 @@ R = ratings_matrix_filled.values
 user_ratings_mean = np.mean(R, axis=1)
 R_demeaned = R - user_ratings_mean.reshape(-1, 1)
 
-
 U, sigma, Vt = svds(R_demeaned, k=3)
-
-
 
 # 9 =====================================
 U_ten_users = U[:10]
@@ -51,6 +48,10 @@ for i in range(3):
 
 plt.title('Films in 3D Space')
 plt.show()
+
+
+
+# ======================================= 2_2 ===============================
 
 
 

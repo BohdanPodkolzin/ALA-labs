@@ -34,6 +34,7 @@ def svd(matrix):
     sigma_matrix = np.zeros_like(matrix, dtype=float)
     np.fill_diagonal(sigma_matrix, sigma)
 
+    # 4) CHECK for recostruct
     reconstructed_matrix = np.dot(eigenvec_M_MT, np.dot(sigma_matrix, eigenvec_MT_M.T))
     is_reconstructed = np.allclose(matrix, reconstructed_matrix)
 
@@ -51,3 +52,5 @@ result = svd(matrix)
 for el in result:
     print(el)
     print('\n\n')
+
+
