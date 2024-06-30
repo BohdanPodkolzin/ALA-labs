@@ -12,8 +12,7 @@ def svd(matrix):
     #matrix 3x3
     mul_M_MT = np.dot(matrix, matrix.T)
 
-    # 2)
-    # Find Eigen Values and Vectors
+    # 2) Find Eigen Values and Vectors
     eigenval_MT_M, eigenvec_MT_M = np.linalg.eigh(mul_MT_M)
     eigenval_M_MT, eigenvec_M_MT = np.linalg.eigh(mul_M_MT)
 
